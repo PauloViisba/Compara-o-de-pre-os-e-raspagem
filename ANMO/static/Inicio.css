@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow-y: hidden; /* Remover barra de rolagem vertical */
+}
+
+.slide {
+  background-color: #020B1C;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.slide .overlap-group-wrapper {
+  background-color: #0B1022;
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Ajustar para a largura total da tela */
+  height: 100vh; /* Ajustar para a altura total da tela */
+}
+
+.slide .overlap-group {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+
+.slide .draw-logo {
+  position: absolute;
+  width: 1000px; /* Novo tamanho */
+  height: 1000px; /* Novo tamanho */
+  top: 100;
+  left: 110px;
+  object-fit: cover;
+}
+
+.slide .barra-lateral {
+  position: absolute;
+  width: 705px;
+  height: 1070px;
+  top: 0;
+  left: 1215px;
+  background-color: #0B1022;
+}
+
+.slide .button-login {
+  top: 411px;
+  display: flex;
+  width: 409px;
+  height: 111px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  position: absolute;
+  left: 1363px;
+  background-color: #146893;
+  border-radius: 100px;
+  box-shadow: 0px 1px 2px #006af0;
+
+}
+
+.slide .text-wrapper {
+  position: relative;
+  width: fit-content;
+ font-family: "Inter-BlackItalic", Helvetica;
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 0;
+  line-height: 72px;
+  white-space: nowrap;
+}
+
+.slide .button-cadastro {
+  top: 557px;
+  display: flex;
+  width: 409px;
+  height: 111px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  position: absolute;
+  left: 1363px;
+  background-color: #146893;
+  border-radius: 100px;
+  box-shadow: 0px 1px 2px #006af0;
+}
+
+.slide .ANMO {
+  position: absolute;
+  width: 679px;
+  height: 133px;
+  top: 243px;
+  left: 1228px;
+  object-fit: cover;
+}
+

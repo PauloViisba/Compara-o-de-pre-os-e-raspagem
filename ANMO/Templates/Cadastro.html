@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="static/Cadastro StyleGuide.css"/>
+    <link rel="stylesheet" href="static/Cadastro.css"/>
+  </head>
+  <body>
+    <div class="slide">
+    <form action="/CriarConta" id="/CriarConta" method="post">
+      <div class="overlap-ground-wrapper">
+        <div class="overlap-ground-wrapper">
+          <div class="overlap-group">
+            <img class="draw-logo" src="static/Imagens/DrawLogo.png">
+            <div class="barra-lateral"></div>
+            
+            <button action class="button-cadastro"><div class="text-wrapper">Cadastro</div></button>
+
+            <div class="user-name">
+              <p class="div">Insira seu nome de usuário:</p>
+              <input name="nome" class="field"><div class="label"></div></input>
+            </div>
+            <div class="email">
+              <p class="div">Insira seu endereço de email:</p>
+              <input name="email" class="field" required pattern="[^@\s]+@[^@\s]+\.[^@\s]+"><div class="label"></div></input>
+            </div>
+            <div class="password">
+              <p class="div">Insira sua senha:</p>
+              <input name="senha1" class="field"><div class="label"></div></input>
+            </div>
+            <div class="confirm-password">
+              <p class="div">Confirme sua senha:</p>
+              <input name="senha2" class="field"><div class="label"></div></input>
+      </form>
+            </div>
+            <img class="ANMO" src="static/Imagens/ANMO.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

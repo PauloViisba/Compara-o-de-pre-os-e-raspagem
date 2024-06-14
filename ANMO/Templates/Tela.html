@@ -1,0 +1,143 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <style>
+        body {
+            background-color: #0B1022;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .ANMO {
+        width: 200px;
+        display: inline-block;
+        }
+        .upbar {
+            background-color: #050D1C;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .insertPesquisa {
+            width: 500px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 9px;
+            margin: 1px;
+        }
+        .insertMarca {
+            width: 175px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 9px;
+            margin: 1px;
+        }
+        .insertLoja {
+            width: 175px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 9px;
+            margin: 1px;
+        }
+        .button-container {
+            display: inline-block;
+            margin-left: 10px;
+        }
+        .BotaoPesquisa {
+            width: 50px;
+            height: 50px;
+            background-color: #5A99C4;
+            border: none;
+            border-radius: 9px;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .BotaoMaiorMenor {
+            width: 175px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 9px;
+            margin: 1px;
+        }
+        .BotaoMenorMaior {
+            width: 175px;
+            height: 50px;
+            background-color: white;
+            display: inline-block;
+            border-radius: 9px;
+            margin: 1px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 80px;
+        }
+        td {
+            display: inline-block;
+            width: 200px; /* Ajuste conforme necessário */
+            margin-right: 10px; /* Espaçamento entre as células */
+            border-radius: 15px;
+        }
+        /* Estilo para centralizar o texto */
+        .nome-produto {
+            text-align: center;
+            background-color: #0D182E; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            font-size: larger; /* Tamanho de fonte maior */
+            font-weight: bold; /* Deixa o texto em negrito */
+            border-radius: 15px;
+        }
+        .preco {
+            text-align: center;
+            background-color: #0D182E; /* Cor de fundo */
+            color: white; /* Cor do texto */
+            padding: 8px; /* Espaçamento interno */
+            border-radius: 15px; /* Borda arredondada */
+        }
+    </style>
+</head>
+<body>
+   
+
+<div class="upbar">
+    <img class="ANMO" src="static/Imagens/ANMO.png"/>
+    <form action="/tela" method="GET">
+        <input class="insertPesquisa" name="pesquisa" placeholder="Digite o termo de pesquisa" size="50">
+        <input class="insertMarca" name="marca" placeholder="Digite a marca">
+        <select class="insertLoja" name="site">
+            <option value="">Todos</option>
+            <option value="Kabum">Kabum</option>
+            <option value="Submarino">Submarino</option>
+            <option value="Terrabyte">Terrabyte</option>
+        </select>
+        <input type="number" class="BotaoMaiorMenor" name="preco_min" placeholder="Preço mínimo">
+        <input type="number" class="BotaoMenorMaior" name="preco_max" placeholder="Preço máximo">
+        <button class="BotaoPesquisa" type="submit">Search</button>
+       
+    </form>
+</div>
+    <table class="table">
+        <tr>
+            {% for produto in produtos %}
+            <td>
+                <a href="/produto?nome={{ produto.Nome|urlencode }}&imagem={{ produto.Imagem }}">
+                    <div class="produto">
+                        <img src="{{ produto.Imagem }}" alt="{{ produto.Nome }}" style="max-width: 200px; max-height: 200px;">
+                        <div class="nome-produto">{{ produto.Nome }}</div>
+                        <div class="preco">R$ {{ produto.Preco }}</div>
+                    </div>
+                </a>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
+

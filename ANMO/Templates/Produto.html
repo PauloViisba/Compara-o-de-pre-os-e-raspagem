@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <style>
+        body {
+            background-color: #0B1022;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .ANMO {
+            width: 200px;
+            display: inline-block;
+        }
+        .upbar {
+            background-color: #050D1C;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 71px;
+        }
+        .containerNomeImagem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 71px;
+        }
+        .nome-do-produto {
+            color:aliceblue;
+            font-size: 24px;
+            width: 568px;
+            height: 161px;
+            background-color: #0d182e99;
+            border-radius: 28px;
+            margin-bottom: 71px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .imagem-do-produto {
+            width: 568px;
+            height: 512px;
+            background-color: #0d182e99;
+            border-radius: 28px;
+        }
+        .caixa-comparadora {
+            width: 762px;
+            height: 744px;
+            background-color: #0d182e99;
+            border-radius: 28px;
+            position: relative;
+        }
+        .botao {
+            background-color: #146893;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .botao-container {
+            position: absolute;
+            margin-top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="upbar"><img class="ANMO" src="static/Imagens/ANMO.png"/></div>
+    <div class="container">
+        <div class="containerNomeImagem">
+            <div class="nome-do-produto">{{ nome_produto }}</div>
+            <div class="imagem-do-produto"><img src="{{ imagem_produto }}" alt="Imagem do Produto"style="width: 500px; height: 500px; margin-left: 40px"></div>
+        </div>
+        <div class="caixa-comparadora">
+            <div class="botao-container">
+                <button class="botao">Lista</button>
+                <button class="botao">Gráfico</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
